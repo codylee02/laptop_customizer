@@ -1,25 +1,20 @@
-import React from 'react';
-
-
-
+import React from "react";
 
 class Total extends React.Component {
-    render() {
-        const total = Object.keys(this.props.selected).reduce(
-            (acc, curr) => acc + this.props.selected[curr].cost,
-            0
-          );
-          console.log(total);
-        return (
-            <div className="summary__total">
-                <div className="summary__total__label">Total</div>
-                <div className="summary__total__value">
-                    { this.props.USCurrencyFormat.format(total) }
-                </div>
-            </div>
-        )
-    }
-
+  render() {
+    const total = Object.keys(this.props.selected).reduce(
+      (acc, curr) => acc + this.props.selected[curr].cost,
+      0
+    );
+    return (
+      <div className="summary__total">
+        <div className="summary__total__label">Total</div>
+        <div className="summary__total__value">
+          {this.props.USCurrencyFormat.format(total)}
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Total
+export default Total;
