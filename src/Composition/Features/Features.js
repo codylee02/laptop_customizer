@@ -37,4 +37,8 @@ class Features extends React.Component {
   }
 }
 
+Features.defaultProps = {
+  features: []
+}
+
 export default Features;
